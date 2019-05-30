@@ -33,11 +33,11 @@ Proyecto Final: Hito 1
     
     Estructura de datos: Colección de datos, relaciones entre estos y operaciones que componen un formato que permite
     el rapido y eficiente acceso a los datos previamente
-    mencionados.  
+    mencionados.   
     
-    Dataframe: Estructura de datos tabular bidimensional, potencialmente heterogénea, con ejes etiquetados (filas y columnas). 
-    Un dataframe es una estructura de datos bidimensional, es decir, los datos se alinean de forma tabular en filas y columnas. 
-    El dataFrame consta de tres componentes principales: los datos, las filas y las columnas.  
+    Dataframe: Estructura de datos tabular bidimensional, potencialmente heterogénea, 
+    con ejes etiquetados (filas y columnas). El dataFrame consta de tres componentes principales: 
+    los datos, las filas y las columnas.  
     
     Lista enlazada: Estructura de datos lineal cuyos elementos no estan ordenados segun su posicion en memoria, 
     sino que estan ordenados secuencialmente mediante nodos y referencias (punteros).  
