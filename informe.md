@@ -35,9 +35,8 @@ Proyecto Final: Hito 1
     el rapido y eficiente acceso a los datos previamente
     mencionados.   
     
-    Dataframe: Estructura de datos tabular bidimensional, potencialmente heterogénea, 
-    con ejes etiquetados (filas y columnas). El dataFrame consta de tres componentes principales: 
-    los datos, las filas y las columnas.  
+    Dataframe: Estructura de datos tabular, bidimensional, potencialmente heterogenea, con ejes etiquetados (filas y columnas). 
+    El dataframe está compuesto de tres elementos: datos, filas y columnas. 
     
     Lista enlazada: Estructura de datos lineal cuyos elementos no estan ordenados segun su posicion en memoria, 
     sino que estan ordenados secuencialmente mediante nodos y referencias (punteros).  
