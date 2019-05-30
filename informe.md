@@ -8,9 +8,9 @@ Proyecto Final: Hito 1
 ----------------------------------------------
 
 *	Introducción
-    El proyecto final del curso de Estructura de Datos y Algoritmos (CC68-SW32), el cual sera desarrollado en un repositorio en GitHub, es iniciado con la intención de
-    desarrollar la competencia general de pensamiento innovador y la competencia específica de diseñar sistemas, componentes o procesos para encontrar soluciones en la
-    atención de necesidades teniendo en cuenta restricciones económicas, sociales, políticas, éticas, de salud y seguridad y otras propias del entorno empresarial acorde
+    El proyecto final del curso de Estructura de Datos y Algoritmos (CC68-SW32), el cual sera desarrollado en un repositorio en GitHub,     es iniciado con la intención de
+    desarrollar la competencia general de pensamiento innovador y la competencia específica de diseñar sistemas, componentes o procesos     para encontrar soluciones en la
+    atención de necesidades teniendo en cuenta restricciones económicas, sociales, políticas, éticas, de salud y seguridad y otras      propias del entorno empresarial acorde
     al ABET - Student Outcome(c). Además es una oportunidad para aplicar los conocimientos adquiridos en este curso, específicamente aquello relacionado a estructuras de
     datos (listas enlazadas, pilas, colas, etc.) y algoritmos de busqueda y ordenamiento. 
     
@@ -23,14 +23,18 @@ Proyecto Final: Hito 1
     exportarlos a un archivo plano con diferente formato.
     
 *	Marco conceptual
-    Algoritmo: Conjunto finito y bien definido de instrucciones u operaciones para realizar una tarea específica. 
+    Algoritmo: Conjunto finito y bien definido de instrucciones u operaciones para realizar una tarea específica.  
+    
     Estructura de datos: Colección de datos, relaciones entre estos y operaciones que componen un formato que permite el rapido y eficiente acceso a los datos previamente
-    mencionados.
+    mencionados.  
+    
     Dataframe: Estructura de datos tabular bidimensional, potencialmente heterogénea, con ejes etiquetados (filas y columnas). Un dataframe es una
     estructura de datos bidimensional, es decir, los datos se alinean de forma tabular en filas y columnas. El dataFrame consta de tres componentes principales:
-    los datos, las filas y las columnas.
+    los datos, las filas y las columnas.  
+    
     Lista enlazada: Estructura de datos lineal cuyos elementos no estan ordenados segun su posicion en memoria, sino que estan ordenados secuencialmente mediante nodos
-    y referencias (punteros).
+    y referencias (punteros).  
+    
     
 *	Diagrama de clases (entidades)
     
