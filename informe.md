@@ -32,8 +32,7 @@ Proyecto Final: Hito 1
     Algoritmo: Conjunto finito y bien definido de instrucciones u operaciones para realizar una tarea específica.  
     
     Estructura de datos: Colección de datos, relaciones entre estos y operaciones que componen un formato que permite
-    el rapido y eficiente acceso a los datos previamente
-    mencionados.   
+    el rapido y eficiente acceso a los datos previamente mencionados.   
     
     Dataframe: Estructura de datos tabular, bidimensional, potencialmente heterogenea, con ejes etiquetados (filas y columnas). 
     El dataframe está compuesto de tres elementos: datos, filas y columnas. 
