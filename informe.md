@@ -53,7 +53,9 @@ Proyecto Final: Hito 1
     
     
 ##	Diagrama de clases (entidades)
-      
+      ![alt text][logo]
+
+[logo]: https://github.com/Sirvas/Trabajo_Final_Algoritmos_Avengers12/blob/master/diagramadeclasesav12.png "Diagrama de Clases"
       
 ##	Elaborar plan de trabajo detallado (Proyecto, Milestones, Issues)
       Ver Milestones del proyecto. 
