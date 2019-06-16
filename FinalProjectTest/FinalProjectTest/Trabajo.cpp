@@ -5,7 +5,7 @@ int main() {
 	char separadora;
 	string nArchivo, str;
 	vector<string> dump;
-	int nFilasBase, nColumnasBase;
+	int nFilasBase, nColumnasBase, op;
 	bool Lfinal;
 
 	cout << "Ingrese el caracter separador del archivo a procesar:" << endl;
@@ -25,12 +25,19 @@ int main() {
 		nFilasBase = count(istreambuf_iterator<char>(infile), istreambuf_iterator<char>(), '\n') + 1;
 
 	while (getline(infile, str)) {
-		dump = split(str, separadora);
+		dump = split(str, separadora);    //dump tiene todos los datos
 	}
 
 	nColumnasBase = dump.size() / nFilasBase;
 
+	cout << "Mostrando dataframe original: " << endl << endl;
 
+	//mostrar dataframe
+
+	cout << "Seleccione la operacion que desee realizar" << endl;
+	cin >> op;
+
+	//opciones
 
 	getchar();
 	return 0;

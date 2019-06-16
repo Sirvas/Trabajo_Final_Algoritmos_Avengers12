@@ -1,9 +1,24 @@
 #pragma once
+#include "separador.h"
 
-#include "Filas.h"
-#include "Columnas.h"
+class Dataframe
+{
+private:
+	vector<string*> pcol;
+	vector<string*> pfil;
 
-class DataFrame {
+public:
+	Dataframe();
+	~Dataframe();
+
+
 
 };
 
+Dataframe::Dataframe()
+{
+}
+
+Dataframe::~Dataframe()
+{
+}
