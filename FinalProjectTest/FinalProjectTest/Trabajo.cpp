@@ -1,5 +1,5 @@
 #include "separador.h"
-
+#include "DataFrame.h"
 
 int main() {
 	char separadora;
