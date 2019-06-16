@@ -4,6 +4,8 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <algorithm>
+
 using namespace std; 
 
 vector<string> split(string str, char separadora) {
