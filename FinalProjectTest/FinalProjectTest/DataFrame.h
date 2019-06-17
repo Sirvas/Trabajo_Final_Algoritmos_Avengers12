@@ -1,11 +1,13 @@
 #pragma once
 #include "separador.h"
+#include "Columnas.h"
+#include "Filas.h"
 
 class Dataframe
 {
 private:
-	vector<string*> pcol;
-	vector<string*> pfil;
+	vector<Columna*> pcol;
+	vector<Fila*> pfil;
 
 public:
 	Dataframe();
