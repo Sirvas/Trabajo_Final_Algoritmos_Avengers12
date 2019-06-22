@@ -3,32 +3,47 @@
 
 int main() {
 	char separadora;
-	string nArchivo, str;
+	string nArchivo, str, nombreC;
 	vector<string> dump;
-	int nFilasBase, nColumnasBase, op;
-	bool Lfinal;
+	vector<Fila*> sfilas;
+	vector<Columna*> scolumnas;
+	int nFilasBase(0), nColumnasBase(0), op, cont(1), indi(0);
 
 	cout << "Ingrese el caracter separador del archivo a procesar:" << endl;
 	cin >> separadora;
 
 	cout << "Ingrese el nombre del archivo:" << endl;
+	cin.ignore();
 	getline(cin, nArchivo);
 
-	cout << "Si en la ultima linea del archivo especificado hay un salto de linea, ingrese 1. En el caso contrario, ingrese 0" << endl; 
-	cin >> Lfinal;
 
 	ifstream infile(nArchivo);
 
-	if (Lfinal == true)
-		nFilasBase = count(istreambuf_iterator<char>(infile), istreambuf_iterator<char>(), '\n');
-	if (Lfinal == false)
-		nFilasBase = count(istreambuf_iterator<char>(infile), istreambuf_iterator<char>(), '\n') + 1;
 
 	while (getline(infile, str)) {
-		dump = split(str, separadora);    //dump tiene todos los datos
+
+		dump = split(str, separadora);
+
+		if (cont == 1) {
+		for (int i = 0; i < dump.size(); i++) {
+			cout << "Ingrese el nombre de la primera columna de datos:" << endl;
+			cin.ignore();
+			getline(cin, nombreC);
+			Columna *C = new Columna(nombreC, indi);
+			scolumnas.push_back(C);
+			indi++;
+		}
+		nColumnasBase = dump.size();
+		cont--;
 	}
 
-	nColumnasBase = dump.size() / nFilasBase;
+		Fila *F = new Fila(dump);
+		sfilas.push_back(F);
+		nFilasBase++;
+		dump.clear();
+
+	}
+
 
 	cout << "Mostrando dataframe original: " << endl << endl;
 

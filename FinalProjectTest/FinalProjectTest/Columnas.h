@@ -4,27 +4,23 @@
 class Columna
 {
 private:
-	string tipo, nombre;
-	vector<string> datos;
+	string  nombre;
+	int indice;
 
 public:
-	Columna(string tipo, string nombre, vector<string> datos);
+	Columna(string nombre, int indice);
 	~Columna();
 
-	vector<string> getvdatos() { return datos; }
+	string getnombre() { return nombre; }
 
-	vector<string> getcoldatos(string nombre) {
-		if (nombre == this->nombre) return datos; 
-	}
-
+	int getindice() { return indice; }
 
 };
 
-Columna::Columna(string tipo, string nombre, vector<string> datos)
+Columna::Columna(string nombre, int indice)
 {
-	tipo = "";
-	nombre = "";
-	this->datos = datos;
+	this->nombre = nombre;
+	this->indice = indice;
 }
 
 Columna::~Columna()

@@ -1,23 +1,26 @@
 #pragma once
-#include "Columnas.h"
+#include "separador.h"
 
 class Fila
 {
 private:
-	int indice;
+
+	vector<string> datos;
 
 public:
-	Fila();
+	Fila(vector<string> datos);
 	~Fila();
 
-	string getVal(string nombre) {
+	vector<string> getdatos() {
+		return datos;
 	}
 
 
 };
 
-Fila::Fila()
+Fila::Fila(vector<string> datos)
 {
+	this->datos = datos;
 }
 
 Fila::~Fila()
