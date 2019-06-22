@@ -7,6 +7,8 @@ int main() {
 	vector<string> dump;
 	vector<Fila*> sfilas;
 	vector<Columna*> scolumnas;
+	vector<Dataframe*> DataFrameSet;
+
 	int nFilasBase(0), nColumnasBase(0), op, cont(1), indi(0);
 
 	cout << "Ingrese el caracter separador del archivo a procesar:" << endl;
@@ -44,6 +46,7 @@ int main() {
 
 	}
 
+    Dataframe dforiginal(scolumnas, sfilas);
 
 	cout << "Mostrando dataframe original: " << endl << endl;
 

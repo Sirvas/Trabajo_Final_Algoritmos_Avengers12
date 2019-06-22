@@ -10,15 +10,19 @@ private:
 	vector<Fila*> pfil;
 
 public:
-	Dataframe();
+	Dataframe(vector<Columna*> pcol, vector<Fila*> pfil);
 	~Dataframe();
 
 
 
 };
 
-Dataframe::Dataframe()
+Dataframe::Dataframe(vector<Columna*> pcol, vector<Fila*> pfil)
 {
+
+	this->pcol = pcol;
+	this->pfil = pfil;
+
 }
 
 Dataframe::~Dataframe()
