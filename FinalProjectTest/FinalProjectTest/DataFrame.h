@@ -13,7 +13,9 @@ public:
 	Dataframe(vector<Columna*> pcol, vector<Fila*> pfil);
 	~Dataframe();
 
+	void mostrardf(Dataframe df) {
 
+	}
 
 };
 

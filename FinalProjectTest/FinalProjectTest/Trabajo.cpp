@@ -1,5 +1,6 @@
 #include "separador.h"
 #include "DataFrame.h"
+#include <windows.h>
 
 int main() {
 	char separadora;
@@ -9,7 +10,7 @@ int main() {
 	vector<Columna*> scolumnas;
 	vector<Dataframe*> DataFrameSet;
 
-	int nFilasBase(0), nColumnasBase(0), op, cont(1), indi(0);
+	int nFilasBase(0), nColumnasBase(0), op(0), cont(1), indi(0);
 
 	cout << "Ingrese el caracter separador del archivo a procesar:" << endl;
 	cin >> separadora;
@@ -21,7 +22,7 @@ int main() {
 
 	ifstream infile(nArchivo);
 
-
+	
 	while (getline(infile, str)) {
 
 		dump = split(str, separadora);
@@ -46,9 +47,10 @@ int main() {
 
 	}
 
-    Dataframe dforiginal(scolumnas, sfilas);
+    Dataframe *dforiginal = new Dataframe(scolumnas, sfilas);
+	DataFrameSet.push_back(dforiginal);
 
-	cout << "Mostrando dataframe original: " << endl << endl;
+	cout << "Mostrando dataframe original con " << nFilasBase << " filas y "<< nColumnasBase << " columnas: "  << endl << endl;
 
 	//mostrar dataframe
 
