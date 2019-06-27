@@ -20,7 +20,7 @@ int main() {
 	vector<Fila*> sfilas;
 	vector<Columna*> scolumnas;
 	vector<Dataframe*> DataFrameSet;
-
+	
 	int nFilasBase(0), nColumnasBase(0), op(0), cont(1);
 
 	cout << "Ingrese el caracter separador del archivo a procesar:" << endl;
@@ -63,6 +63,16 @@ int main() {
 
 	}
 	infile.close();
+
+	colmap mapa;
+	for (auto ccol : scolumnas) {
+		mapa[ccol->getnombre()] = ccol;
+	}
+
+	for (auto ffil : sfilas) {
+		ffil->setcolmap(&mapa);
+	}
+
 
     Dataframe *dforiginal = new Dataframe(scolumnas, sfilas);
 	DataFrameSet.push_back(dforiginal);
