@@ -13,6 +13,26 @@ vector<string> split(string str, char separadora) {
 }
 
 
+void exportarArchivo(Dataframe* df, char delim) {
+	string archivoN;
+	cout << "Ingrese el nombre del archivo a crear: " << endl;
+	getline(cin, archivoN);
+	cout << "ingrese el caracter separador a utilizar en el archivo: " << endl;
+	cin >> delim;
+	ofstream outfile(archivoN);
+	
+	for (auto fil : df->getfil()) {
+		for (int i = 0; i < df->getcol().size(); i++) {
+			outfile << fil->getdata(df->getcol()[i]->getnombre()) << delim ;
+			if (i == df->getcol().size() - 1) {
+				outfile << "\b" << "\n";
+			}
+		}
+		cout << endl;
+	}
+}
+
+
 int main() {
 	char separadora(',');
 	string nArchivo(""), nombreC("");
