@@ -101,12 +101,24 @@ int main() {
 
 	dforiginal->mostrardf();
 
-	cout << "Seleccione la operacion que desee realizar" << endl;
-	cin >> op;
-
-	switch (op) {
-
-
+	bool x = true;
+	while (x) {
+		cout << "Seleccione la operacion que desee realizar: " << endl;
+		cout << "Opción 1 (Indexado de Datos): " << endl;
+		cout << "Opción 2 (Selección de Datos): " << endl;
+		cout << "Opción 3 (Filtrado de Datos): " << endl;
+		cout << "Opción 4 (Ordenamiento de Datos): " << endl;
+		cout << "Opción 5 (Exportación de Datos): " << endl;
+		cout << "Salir (Elegir 0): " << endl;
+		cin >> op;
+		switch (op) {
+		case 0: x = false; break;
+		case 1: break;
+		case 2: break;
+		case 3: break;
+		case 4: break;
+		case 5: break;
+		}
 	}
 
 	//opciones
