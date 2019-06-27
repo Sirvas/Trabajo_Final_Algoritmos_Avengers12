@@ -84,6 +84,11 @@ int main() {
 	cout << "Seleccione la operacion que desee realizar" << endl;
 	cin >> op;
 
+	switch (op) {
+
+
+	}
+
 	//opciones
 
 	getchar();
