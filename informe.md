@@ -63,3 +63,5 @@ Proyecto Final: Hito 1
 ## Integrantes:
 * Carlos Iparraguirre Marujo
 * Sebastian Sirvas De La Cuba
+
+# Nota 12
