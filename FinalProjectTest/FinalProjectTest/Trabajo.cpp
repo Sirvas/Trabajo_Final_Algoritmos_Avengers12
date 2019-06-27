@@ -1,10 +1,21 @@
 #include "separador.h"
 #include "DataFrame.h"
-#include <windows.h>
+#include <time.h>
+
+vector<string> split(string str, char separadora) {
+	istringstream iss(str);
+	string cad;
+	vector<string> arr;
+	while (getline(iss, cad, separadora)) {
+		arr.push_back(cad);
+	}
+	return arr;
+}
+
 
 int main() {
-	char separadora;
-	string nArchivo, str, nombreC;
+	char separadora(',');
+	string nArchivo(""), nombreC("");
 	vector<string> dump;
 	vector<Fila*> sfilas;
 	vector<Columna*> scolumnas;
@@ -14,23 +25,25 @@ int main() {
 
 	cout << "Ingrese el caracter separador del archivo a procesar:" << endl;
 	cin >> separadora;
+	cin.ignore();
 
 	cout << "Ingrese el nombre del archivo:" << endl;
-	cin.ignore();
+	
 	getline(cin, nArchivo);
-
-
-	ifstream infile(nArchivo);
+	
 
 	
-	while (getline(infile, str)) {
-
+	ifstream infile;
+	infile.open(nArchivo);
+	
+	while (infile.good()) {
+		string str;
+		getline(infile, str);
 		dump = split(str, separadora);
 
 		if (cont == 1) {
 		for (int i = 0; i < dump.size(); i++) {
 			cout << "Ingrese el nombre de la primera columna de datos:" << endl;
-			cin.ignore();
 			getline(cin, nombreC);
 			Columna *C = new Columna(nombreC, indi);
 			scolumnas.push_back(C);
