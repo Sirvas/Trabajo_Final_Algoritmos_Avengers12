@@ -1,27 +1,34 @@
 #pragma once
 #include "separador.h"
+#include "Columnas.h"
+
+
+
+typedef map<string, Columna*> colmap;
+map<string, Columna*>::iterator it;
 
 class Fila
 {
 private:
-
-	vector<string> datos;
-
+	int idx;
+	colmap* cols;
 public:
-	Fila(vector<string> datos);
+	Fila(colmap* cols) : cols(cols) {};
+	Fila() {};
+	Fila(int idx) : idx(idx) {};
 	~Fila();
 
-	vector<string> getdatos() {
-		return datos;
+
+	string getdata(string name) {
+		return (*cols)[name]->getdata()[idx];
 	}
 
+	void setcolmap(colmap* cols) {
+		this->cols = cols;
+	}
 
 };
 
-Fila::Fila(vector<string> datos)
-{
-	this->datos = datos;
-}
 
 Fila::~Fila()
 {

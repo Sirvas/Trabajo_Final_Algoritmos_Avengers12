@@ -21,7 +21,7 @@ int main() {
 	vector<Columna*> scolumnas;
 	vector<Dataframe*> DataFrameSet;
 
-	int nFilasBase(0), nColumnasBase(0), op(0), cont(1), indi(0);
+	int nFilasBase(0), nColumnasBase(0), op(0), cont(1);
 
 	cout << "Ingrese el caracter separador del archivo a procesar:" << endl;
 	cin >> separadora;
@@ -43,29 +43,33 @@ int main() {
 
 		if (cont == 1) {
 		for (int i = 0; i < dump.size(); i++) {
-			cout << "Ingrese el nombre de la primera columna de datos:" << endl;
+			vector<string> vec;
+			vec.push_back(dump[i]);
+			cout << "Ingrese el nombre de la columna de datos:" << endl;
 			getline(cin, nombreC);
-			Columna *C = new Columna(nombreC, indi);
+			Columna *C = new Columna(nombreC, vec);
 			scolumnas.push_back(C);
-			indi++;
 		}
 		nColumnasBase = dump.size();
 		cont--;
-	}
+	}else for (int i = 0; i < dump.size(); i++) {
+		scolumnas[i]->addData(dump[i]);
+    	}
 
-		Fila *F = new Fila(dump);
+		Fila *F = new Fila(nFilasBase);
 		sfilas.push_back(F);
 		nFilasBase++;
 		dump.clear();
 
 	}
+	infile.close();
 
     Dataframe *dforiginal = new Dataframe(scolumnas, sfilas);
 	DataFrameSet.push_back(dforiginal);
 
 	cout << "Mostrando dataframe original con " << nFilasBase << " filas y "<< nColumnasBase << " columnas: "  << endl << endl;
 
-	//mostrar dataframe
+	dforiginal->mostrardf();
 
 	cout << "Seleccione la operacion que desee realizar" << endl;
 	cin >> op;

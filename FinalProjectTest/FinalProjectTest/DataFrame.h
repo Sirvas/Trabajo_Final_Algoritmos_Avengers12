@@ -13,9 +13,29 @@ public:
 	Dataframe(vector<Columna*> pcol, vector<Fila*> pfil);
 	~Dataframe();
 
-	void mostrardf(Dataframe df) {
-
+	vector<Columna*> getcol() {
+		return pcol;
 	}
+
+	vector<Fila*> getfil() {
+		return pfil;
+	}
+
+	void mostrardf() {
+		for (auto col : pcol) {
+			cout << col->getnombre() << " | ";
+		}
+		cout << endl << endl;
+
+		for (auto fil : pfil) {
+			for (int i = 0; i < pcol.size(); i++) {
+				cout << fil->getdata(pcol[i]->getnombre()) << " | ";
+			}
+			cout<< endl;
+		}
+	}
+
+
 
 };
 
